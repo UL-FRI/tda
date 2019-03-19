@@ -21,3 +21,8 @@ def test_intersection():
              ((-1, 0), (1, 0), (0, 1), (0, 0), (0, 0)))
     for case in cases:
         assert intersection(*case[:-1]) == case[-1]
+
+
+def test_intersection_student():
+    case = ((1, 0), (0, 0), (1, 1), (0, 0), (0, 0))
+    assert intersection(*case[:-1]) == case[-1]

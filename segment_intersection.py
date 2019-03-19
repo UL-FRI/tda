@@ -49,7 +49,7 @@ def intersection(
     elif any([e == 1 for e in tests]):
         # No intersection
         return None
-    elif all([e == 0 for e in tests]):
+    elif all([e == 0 for e in orientations]):
         ordered_points = sorted((A, B, C, D))  # Order first by x, then by y
         ss = ((A, B), (C, D))
         # the first and the third ordered point must belong to the
@@ -59,7 +59,7 @@ def intersection(
             return p1 if p1 == p2 else (p1, p2)
         else:
             return None
-    elif any([e == 0 for e in tests]):
+    elif any([e == 0 for e in orientations]):
         # Touching in one point, must necessary
         # be endpoint of one of the segments.
         i = orientations.index(Orientation.NONE)
